@@ -753,7 +753,7 @@ color:rgb(0, 234, 255)
     font-size: 12px; */
     cursor: pointer;
     background-color: rgb(0, 234, 255, 0.6);
-    color: rgb(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
     transition-property: transform;
     transition-timing-function: ease;
     transition-duration: 0.3s;
