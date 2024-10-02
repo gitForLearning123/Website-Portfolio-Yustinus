@@ -14,27 +14,25 @@
 
 margin: 0px;
 padding: 0px;
-
-
-
+scroll-behavior: smooth;
 }
+
+
 
 body{
 
-    background-color: rgb(6, 14, 52);
+    background-color: rgb(0, 0, 0);
+    
 
 }
 
 header{
 
-background-color: rgb(255, 255, 255, 0.01);
 padding: 20px;
 display: flex;
 justify-content: space-between;
-position: fixed;
-top: 0px;
-width: 100%;
-
+background-color: rgb(6, 14, 52);
+z-index: 1;
 
 
 
@@ -44,31 +42,49 @@ ul{
 
 display: flex;
 list-style-type: none;
-gap: 100px;
-margin-right: 100px;
+justify-content: center;
+align-items: center;
+gap: 50px;
+
 
 }
 
-li a{
-
-text-decoration: none;
-font-size: 15px;
-color: white;
-font-family: "Source Code Pro", monospace;
-font-optical-sizing: auto;
-font-weight: 200;
-font-style: normal;
-
+ li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    transition: all 0.3s ease;
 }
 
-li:hover a{
-   text-decoration: underline;
+li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
 }
+
+li:hover a::after {
+    width: 100%;
+} 
+
+
 
 .nav-right{
 
 display: flex;
 align-items: center;
+width: fit-content;
+margin-right: 50px;
+justify-content: center;
 
 }
 
@@ -98,12 +114,11 @@ align-items: center;
 
 position: relative;
 height: fit-content;
-width: fit-content;
+width: 42%;
 scale: calc(1.4);
-left: 50px;
-top: 100px;
-
-
+left: 20px;
+bottom: 100px;
+/* background-color: brown; */
 
 
 
@@ -113,12 +128,10 @@ top: 100px;
 
 .myImage{
 
-    position: relative;
-    left: 50px;
-    top: 250px;
     height: 895px; /*895*/
     width: 600px; /*600*/
-    z-index: -1;
+    z-index: 1;
+
    
    
     
@@ -134,7 +147,7 @@ border-radius: 10px;
 
 }
 
-.bg-myImage{
+/* .bg-myImage{
 
 background-color: rgb(0, 234, 255);
 position: absolute;
@@ -147,15 +160,23 @@ border-radius: 1000px 1000px 0px 0px;
 
 
 
-}
+} */
 
 .top-div{
 justify-content: space-evenly;
-height: 500px;
+height: min-content;
 width: 100%;
 display: flex;
 align-items: center;
+background-color: rgb(6, 14, 52);
 
+}
+
+.top-wrapper{
+
+    gap: 200px;
+    display: flex;
+    align-items: center;
 }
 
 .type-container{ display: inline-block;}
@@ -200,17 +221,38 @@ align-items: center;
     position: relative;
     top: 20px;
 
+
   
 }
 
-#wb-mi {
-    color: rgb(106, 68, 121);
-    font-family: "Josefin Sans", sans-serif;
+.myIntro-name{
+    background-color: rgb(56, 42, 165);
+
+}
+
+#wb-ho {
+    color: rgb(255, 255, 255);
+    /* font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
+    font-style: normal; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
     font-style: normal;
-    margin-top: 10px;;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 30px;
+ 
+    
 
+}
+
+#wb-ho span{
+    
+     color: rgb(0, 234, 255);
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .myIntro p{
@@ -227,10 +269,21 @@ align-items: center;
     top: 30px;
     padding: 10px;
     font-size: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
+    
   
 
 }
+
+.mimpi:hover{
+    cursor: pointer;
+    /* background-color: white;
+    color:rgb(0, 234, 255);
+    transition-property: background-color;
+    transition-timing-function: ease;
+    transition-duration: 0.4s; */
+}
+
 
 a span{
 
@@ -243,11 +296,11 @@ color:rgb(0, 234, 255)
 }
 
 
+
 .mid-div{
 
-    margin-top: 600px;
     justify-content: left;
-    height: 100vh;
+    height: min-content;
     background-color: rgb(124, 107, 140);
     display: flex;
     flex-direction: column;
@@ -270,8 +323,8 @@ color:rgb(0, 234, 255)
     text-align: justify;
     color: white;
     position: relative;
-    height: fit-content;
     width: 100%;
+  
 
     
 
@@ -295,8 +348,14 @@ color:rgb(0, 234, 255)
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 30px;
-    margin-left: 110px;
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    padding: 20px
+   
+
+
+
   
 
 }
@@ -307,11 +366,23 @@ color:rgb(0, 234, 255)
     
 }
 
+.aboutMe-desc-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
 .aboutMe-desc{
 
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    text-align: center;
+    width: 80%;
+    
     
   
     
@@ -327,28 +398,24 @@ color:rgb(0, 234, 255)
 
 }
 
+/* 
 .card-desc p span{
     color: rgb(0, 255, 98);
-}
+} */
 
-.card-desc{
-
-    width: 40%;
-    padding: 10px;
-    margin-left: 100px;
-
-    
-}
-
-.card-desc2{
-
+.card-desc, .card-desc2{
     width: 40%;
     text-align: justify;
-    margin-right: 110px;
-
-
+    box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
+    -webkit-box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
+    -moz-box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
+    border-radius: 10px;
+    padding: 20px;
     
+
 }
+
+
 
 .card-desc2 p{
 
@@ -373,6 +440,172 @@ color:rgb(0, 234, 255)
 
 }
 
+.skill-div{
+
+   height: min-content;
+   background-color: rgb(12, 56, 104);
+   color: white;
+
+}
+
+#skill_title{
+
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color: rgb(0, 234, 255);
+
+ 
+    
+}
+
+
+
+.skill-div #skill_title{
+
+    text-align: center;
+    padding: 50px;
+} 
+
+.card-skill-wrapper1{
+    /* background-color: chocolate; */
+    display: flex;
+    justify-content: center;
+    padding: 20px
+
+
+}
+
+.card-skill-wrapper2{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+
+.card-skill{
+    background-color: rgba(165, 136, 136, 0.3);
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+
+.card-skill:hover{
+    transform: scale(1.1);
+    transition-timing-function: ease;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 3px rgba(0,255,255,0.75);
+-webkit-box-shadow: 1px 1px 5px 3px rgba(0,255,255,0.75);
+-moz-box-shadow: 1px 1px 5px 3px rgba(0,255,255,0.75);
+    
+}
+
+#logo_html{
+    width: 45%;
+    height: 45%;
+    
+}
+
+#logo_CSS{
+    width: 40%;
+    height: 48%;
+
+
+}
+
+
+#bar_1{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.progress{
+
+    height: 20px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+
+
+.bgr-color-7{
+    
+    width: 70%;
+    height: 100%;
+    background-color: rgb(0, 94, 255);
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+    
+
+}
+
+.bgr-color-8{
+    
+    width: 80%;
+    height: 100%;
+    background-color: rgb(0, 94, 255);
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+    
+
+}
+
+.bgr-color-9{
+    
+    width: 90%;
+    height: 100%;
+    background-color: rgb(0, 94, 255);
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+    
+
+}
+
+
+.bgr-color span {
+
+    margin-left: 10px;
+
+
+}
+
+.card-skill h1{
+
+    font-size: 20px;
+    text-align: center;
+  
+    
+}
+
+.card-skill-desc{
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.card-skill-desc p{
+    margin-top: 20px;
+}
+
 .bot-div{
     height: min-content;
     background-color: rgb(106, 68, 121, 0.5);
@@ -380,28 +613,28 @@ color:rgb(0, 234, 255)
  
 }
 
-.portfolio{
-
-text-align: center;
-padding: 50px;
-
-
+.bot-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
 }
 
 
-.portfolio h3{
+
+.bot-div-title1{
 
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(0, 234, 255);
-  
 
 }
 
-.portfolio h1{
+.bot-div-title2{
 
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -410,125 +643,132 @@ padding: 50px;
     font-size: 40px;
     color: white;
     margin-top: 10px;
+    margin-right: 50px;
+
 
 }
 
-.portfolio-desc{
-    height: fit-content;
-    padding: 20px;
+.bot-div-wrapper1{
+
+    width: 100%;
     display: flex;
-    gap: 50px;
-    margin-top: 50px;
+    justify-content: center;
+    height: min-content;
+    
+
+
+}
+
+#port-img{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.bot-div-wrapper2{
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-
-    
-
+    gap: 30px;
+    width: 80%;
 }
 
-.card-port{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-   
- 
-}
+.card-portfolio{
 
-.mimpi:hover{
-    cursor: pointer;
-    background-color: white;
-    color:rgb(0, 234, 255);
-    transition-property: background-color;
-    transition-timing-function: ease;
-    transition-duration: 0.4s;
-}
-
-
-
-.card-desc-port{
-    background-color: azure;
-    width: fit-content;
-    margin-top: 20px;
-    text-align: justify;
-    
-    
-}
-
-
-
-.portfolio-desc img{
-    height: 300px;
-    width: 100%;
+    text-align: center;
+    /* background-color: rgba(165, 136, 136, 0.3); */
+    width: 40%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, 0.2);
+    height: fit-content;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     
+    
 }
 
-.portfolio-desc .port-img:hover img{
-
-    height: 300px;
-    width: 500px;
-    scale: calc(1.05);
-    transition-property: scale;
-    transition-timing-function: ease;
-    transition-duration: 0.5s;
-
-
-}
-
-.port-img{
-    width: fit-content;
-}
-
-.portfolio-desc .download-file{
-
-    border: 1px solid rgb(0, 234, 255);
-    border-radius: 100px;
+.h1-port{
+    display: flex;
+    justify-content: center;
     padding: 10px;
-    text-decoration: none;
-    font-family: "SUSE", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    width: 150px;
-    text-align: center;
-    margin-top: 10px;;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 234, 255);
-
 
 }
 
-.download-file:hover {
-    background-color: rgb(0, 234, 255, 0.6);
-    color: rgb(255, 255, 255, 0.6);
-    transition-property: background-color;
-    transition-timing-function: ease;
-    transition-duration: 0.3s;
+.h1-port h1{
+    background-color: white;
+
 }
 
-.card-desc-port-expl{
+.port-desc{
 
-    width: 100%;
     text-align: justify;
-    margin-top: 20px;
-    color: white;
-    text-align: justify;
+    margin-top: 10px;
+    padding: 5px;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
-  
+    /* border-radius:  0px 0px 20px 20px; */
+    color: white;
+    padding: 15px;
+}
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;;
+}
+
+
+
+.check-out{
+
+    padding: 15px;
+    margin: 20px;
+    width: 25%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(0, 234, 255);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+
+    
+    
 
 }
 
+
+
+
+
+
+.check-out:hover{
+
+
+    /* width: 140px ;
+    height: 40px;
+    font-size: 12px; */
+    cursor: pointer;
+    background-color: rgb(0, 234, 255, 0.6);
+    color: rgb(255, 255, 255, 0.6);
+    transition-property: transform;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transform: scale(0.9);
+
+    
+
+}
+
+
+
+
 footer{
     background-color: rgb(6, 14, 52);
-    height: 40vh;
+    height: min-content;
 }
 
 .footer-desc{
@@ -538,7 +778,6 @@ footer{
     color: white;
     align-items: center;
     padding: 50px;
-    margin-top: 20px;
 }
 
 .footer-desc h1{
@@ -557,12 +796,40 @@ footer{
 
 }
 
+.icons{
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    top: 30px; 
+
+}
+
+.email-icon{
+    color: red;
+    scale: calc(2.2);
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px;
+
+}
+
+.email-icon:hover{
+    color: white;
+    transition-property: color;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+
 .linkedin-icon{
 
     color: rgb(0, 162, 255);
-    position: relative;
-    top: 30px;
-    scale: calc(2)
+    scale: calc(2);
+    
     
     
 }
@@ -583,339 +850,655 @@ footer{
 
 }
 
-
-@media screen and (max-width: 1400px){
-
-   .myIntro{
-
-    scale: calc(1.1);
-
-   }
-
-   .bg-myImage{
-
-    height: 395px;
-    width: 360px;
-
-   }
-
-   .myImage{
-    
-    height: 795px; /*895*/
-    width: 500px;
-    
-   }
-
-   .card-port{
-    width: 33%;
-   }
-
-   footer h1{
-    text-align: center;
+@media screen and (max-width: 1659px){
+    .myIntro{
+        scale: calc(1.2);
+    }
 }
 
-
-}
-
-@media screen and (max-width: 1264px){
-
-    .aboutMe h3{
-        font-size: 20px;
-    }
-
-    .aboutMe-desc h1{
-        font-size: 25px;
-    }
-
-    .aboutMe-desc p{
-        font-size: 15px;
-    }
-
-}
-
-@media screen and (max-width: 1228px){
+@media screen and (max-width: 1544px){
 
     .myImage{
+
+        height: 896px; /*895*/
+        width: 600px; /*600*/
+        z-index: 1;
+        border-radius: 100px 100px 0px 0px;
     
-        height: 695px; /*895*/
-        width: 420px;
-        
-       }
+
 
        
-   .bg-myImage{
-
-    height: 295px;
-    width: 260px;
-
-   }
+    }
 
 
-}
 
-@media screen and (max-width: 1214px) {
+
+
+
+
+    /* .bg-myImage{
+
+        background-color: rgb(0, 234, 255);
+        position: absolute;
+        z-index: -1;
+        height: 305px;
+        width: 300px;
+        top: 200px;
+        right: 50px;
+        border-radius: 1000px 1000px 0px 0px;
+        
+        
+        
+        }
+
+        .myImage img{
+
+            height: 600px; 
+            width: 400px;
+
+
+        } */
+
+
     
-.card-port{
-    width: 45%;
 }
 
-.footer-desc p{
-    font-size: 15px;
-    width: 80%;
-}
+@media screen and (max-width: 1540px){
 
-    
-}
+    .myImage{
+
+        height: 896px; /*895*/
+        width: 600px; /*600*/
+   
 
 
 
-@media screen and (max-width: 1131px){
-
-    .top-div{
-
-        flex-direction: column;
        
     }
 
     .myIntro{
-        top: 802px;
+
+        transform: scale(0.9);
 
     }
 
-    .myImage{
-       top: -130px;
-   
+    .top-wrapper{
+
+        gap: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .myIntro-name{
+        width: fit-content;
       
     }
 
+
+
+
+    
+}
+
+@media screen and (max-width: 1397px){
+
+    .myImage{
+
+        height: 595px; /*895*/
+        width: 400px; /*600*/
+        z-index: 1;
+
+        
+    }
+
     .myIntro{
-        scale: calc(1.3);
-    }
 
-
-}
-
-@media screen and (max-width: 990px){
-
-
-    .aboutMe h3{
-        font-size: 20px;
-    }
-
-    .aboutMe-desc h1{
-        font-size: 25px;
-    }
-
-    .aboutMe-desc p{
-        font-size: 10px;
-    }
-
-
-
-}
-
-@media screen and (max-width: 985px){
-
-
-    .aboutMe-desc p{
-        font-size: 10px;
-    }
-
-    .card-port{
+        left: 100px;
+        bottom: 20px;
         width: 50%;
+        
+        
+        
     }
 
 
     
-
-
+    
+    
 }
 
-@media screen and (max-width: 858px) {
+@media screen and (max-width: 1189px){
 
-    .myIntro{
+    ul{
 
-        scale: calc(1.2);
-    
+        flex-wrap: wrap;
+
+
+    }
+
+    .nav-right{
+
+        width: 100%;
+        margin-right: 0px;
+     
+
     }
 
     header{
-
+        
         flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+        background-color: rgb(44, 18, 75);
+       
 
+        
+        
 
     }
 
-    ul{
+    .top-wrapper{
         flex-direction: column;
-        margin-top: 20px;
-        gap: 90px;
+        align-items: center;
+        justify-content: center;
+        gap: 200px;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        
+    
+    }
+
+    .myImage{
+
+        height:200px; /*395*/
+        width: 200px; /*250*/
+        z-index: 1;
+        border: 1px solid black;
+
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        border-radius: 100%;
+        align-items: center;
+        margin-top: 50px;;
 
     }
 
-  
-
-
-
-    
-}
-
-@media screen and (max-width: 785px){
-
-
-
-    .footer-desc p{
-        font-size: 15px;
-        width: 100%;
+    .myImage img{
+        height: 495px; /*895*/
+        width: 350px;
+        position: relative;
+        bottom: 30px;
+        border-radius: 50px;
+        box-shadow: 2px 1px 5px 6px rgba(255, 255, 255, 0.17);
+        -webkit-box-shadow: 2px 1px 5px 6px rgba(255, 255, 255, 0.17);
+        -moz-box-shadow: 2px 1px 5px 6px rgba(255, 255, 255, 0.17);
+        background-color: rgb(27, 85, 140);
     }
-
-
-
-    
-}
-
-@media screen and (max-width: 745px){
-
-    .card-port{
-        width: 100%;
-    }
-    
-}
-
-@media screen and (max-width: 732px){
 
     .myIntro{
 
-        scale: calc(1.2);
-        left: -5px;
- 
+        transform: scale(0.8);
+
+    }
+
+    
+    .myIntro{
+
+        position: relative;
+        height: fit-content;
+        width: 90%;
+        scale: calc(1.4);
+        
+        
+        
+    }
+
+    .aboutMe-desc{
+        flex-wrap: wrap;
+    }
+
+    .card-desc, .card-desc2{
+        width: 100%;
+        text-align: justify;
+        box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
+        -webkit-box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
+        -moz-box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
+        border-radius: 10px;
+        
     
     }
 
-    .myIntro h1{
-        font-size: 25px;
+    .card-skill-wrapper2{
+        flex-wrap: wrap;
+    }
+
+    .card-skill{
+        background-color: rgba(165, 136, 136, 0.3);
+        width: 30%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        
+    }
+
+    .card-portfolio{
+
+        text-align: center;
+        /* background-color: rgba(165, 136, 136, 0.3); */
+        width: 50%;
+        text-align: center;
+        border-radius: 20px;
+        background-color: rgb(0, 0, 0, 0.2);
+        height: fit-content;
+        
+        
+    }
+}
+
+@media screen and (max-width: 1087px){
+
+
+  .card-portfolio{
+     width: 60%;    
+
+}
+
+}
+
+@media screen and (max-width: 991px) {
+
+
+
+      .card-portfolio{
+        width: 70%;    
+   
+   }
+    
+
+
+    
+}
+
+@media screen and (max-width: 881px) {
+
+   
+    /* .type-container{
+
+       font-size: 16px;
+
+    }
+
+    .myIntro-name{
+
+        font-size: 32px;
+
+    }
+
+    #wb-ho{
+
+        font-size: 30px;
+
+    }
+
+    .mimpi{
+
+        font-size: 10px;
+
+    } */
+
+    .myIntro{
+        /* background-color: rgb(70, 48, 117); */
+        scale: calc(1.2);
+        left: 50px; 
+    }
+
+
+
+
+
+
+    
+}
+
+@media screen and (max-width: 694px){
+
+
+    .myIntro{
+        /* background-color: rgb(70, 48, 117); */
+        scale: calc(1.1);
+        left: 20px; 
+
+
+    }
+
+    .card-skill{
+    
+        width: 70%;
+
+    }
+
+    .card-portfolio{
+        width: 100%;
+    }
+
+
+    
+    .footer-desc p{
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+       
+        
+    
+    }
+
+    
+
+
+
+   
+
+}
+
+@media screen and (max-width: 612px ){
+
+    .myIntro{
+        /* background-color: rgb(70, 48, 117); */
+        transform: scale(0.7);
+        left: 10px; 
+        width: 100%;
+    }
+
+    .card-skill{
+    
+        width: 100%;
+
+    }
+    
+
+}
+
+@media screen and (max-width: 536px){
+
+    .myIntro{
+        /* background-color: rgb(70, 48, 117); */
+        transform: scale(0.8);
+        left: 10px; 
+        width: 80%;
     }
 
 
 }
 
-@media screen and (max-width: 675px){
+@media screen and (max-width:464px){
 
-    .aboutMe h3{
-        font-size: 20px;
-    }
 
     .aboutMe-desc h1{
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25px;
+        margin-top: 10px;
+        color: white;
+    
+    
+    }
+    
+    .aboutMe h3{
+    
+        font-family: "SUSE", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 25px;
+        position: relative;
+        text-align: center;
+        padding: 20px
+       
+    
+    
+    
+      
+    
+    }
+
+    .card-desc p, .card-desc2 p {
+        text-align: justify;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 15px;
+      
+    
+    }
+
+    #skill_title{
+
+        font-family: "SUSE", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 25px;
+        color: rgb(0, 234, 255);
+    
+     
+        
+    }
+
+    .bot-div-title1{
+
+        font-family: "SUSE", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 25px;
+        color: rgb(0, 234, 255);
+    
+    }
+    
+    .bot-div-title2{
+    
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25px;
+        color: white;
+        margin-top: 10px;
+        margin-right: 20px;
+    
+    
+    }
+
+        
+    .footer-desc h1{
+        font-size: 25px;
+
+
+    }
+
+
+    
+
+
+   
+
+}
+
+
+@media screen and (max-width: 389px){
+
+    .check-out{
+
+        padding: 15px;
+        margin: 20px;
+        width: 45%;
+        border-radius: 30px;
+        border: none;
+        background-color: rgb(0, 234, 255);
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        
+    
+        
+        
+    
+    }
+
+    .myImage{
+
+        height:200px; /*395*/
+        width: 200px; /*250*/
+        z-index: 1;
+        border: 1px solid black;
+
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        border-radius: 100%;
+        align-items: center;
+        margin-top: 50px;;
+        transform: scale(0.8);
+
+    }
+
+    .myImage img{
+        height: 495px; /*895*/
+        width: 350px;
+        position: relative;
+        bottom: 30px;
+        border-radius: 50px;
+        box-shadow: 2px 1px 5px 6px rgba(255, 255, 255, 0.17);
+        -webkit-box-shadow: 2px 1px 5px 6px rgba(255, 255, 255, 0.17);
+        -moz-box-shadow: 2px 1px 5px 6px rgba(255, 255, 255, 0.17);
+        background-color: rgb(27, 85, 140);
+    }
+
+    .myIntro p{
+
+        border: 1px solid rgb(0, 234, 255);
+        width: fit-content;
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        font-family: "Source Code Pro", monospace;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        position: relative;
+        top: 30px;
+        padding: 10px;
+        font-size: 8px;
+        border-radius: 10px;
+        
+      
+    
+    }
+    
+
+}
+
+@media screen and (max-width: 321px){
+
+    
+    .check-out{
+
+        transform: scale(0.6);
+       
+    }
+
+    
+.check-out:hover{
+
+
+    transform: scale(0.5);
+
+    
+
+}
+
+
+        
+    .footer-desc h1{
+        font-size: 15px;
+
+
+    }
+
+    .footer-desc p{
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+        margin-top: 15px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+       
+        
+    
+    }
+
+    .email-icon{
+        color: red;
+        scale: calc(1.4);
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 2px;
+    
+    }
+    
+    .email-icon:hover{
+        color: white;
+        transition-property: color;
+        transition-timing-function: ease;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+    
+    
+    .linkedin-icon{
+    
+        color: rgb(0, 162, 255);
+        scale: calc(1.4);
+        
+        
+        
+    }
+
+    .footer-copyright{
+        font-size: 10px;
+    }
+
+    .port-desc p{
+        font-size: 10px;
+    }
+
+    .h1-port h1{
         font-size: 20px;
     }
 
-    .aboutMe-desc p{
-        font-size: 12px;
-    }
-    
-}
-
-@media screen and (max-width: 530px) {
-
-    .myIntro{
-
-        left: 20px;
-        scale: calc(1.0);
-
-    }
-
-    .aboutMe-desc p{
-        font-size: 10px;
-    }
-
-    .myImage{
-
-        height: 595px; /*895*/
-        width: 320px;
-        top: 2px;
-
-    }
-
-    .bg-myImage{
-
-        height: 290px; /*895*/
-        width: 220px;
-        top: 150px;
-        left: 50px;
-
-    }
   
-}
 
-@media screen and (max-width: 485px) {
 
-    .myIntro h1{
 
-        font-size: 20px  ;
+        
 
-    }
-
-    .myIntro p{
-        font-size: 5px;
-    }
-    
-    .type-container h5{
-        font-size: 15px;
-    }
-
-    .aboutMe-desc p{
-
-       font-size: 8px;
-
-    }
-
-    .myImage{
-
-        height: 595px; /*895*/
-        width: 220px;
-        top: 2px;
-
-    }
-
-    .bg-myImage{
-
-        height: 190px; /*895*/
-        width: 120px;
-        top: 150px;
-        left: 50px;
-
-    }
-
-   
 
 }
 
-@media screen and (max-width: 408px){
 
-    .myIntro h1{
-
-        font-size: 15px  ;
-
-    }
-
-    .myIntro p{
-        font-size: 5px;
-    }
-    
-    .type-container h5{
-        font-size: 10px;
-    }
-
-   
-}
-
-@media
 
 
 
    
-
-
-
 
 
