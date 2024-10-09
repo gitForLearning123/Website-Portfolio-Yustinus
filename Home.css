@@ -411,7 +411,8 @@ color:rgb(0, 234, 255)
     -webkit-box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
     -moz-box-shadow: 2px 1px 5px 6px rgba(0,0,0,0.17);
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
+
     
 
 }
@@ -431,6 +432,11 @@ color:rgb(0, 234, 255)
 
 
     
+}
+
+.button-cv{
+    display: flex;
+    justify-content: left;
 }
 
 
@@ -691,6 +697,7 @@ color:rgb(0, 234, 255)
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: 50%;
     
     
 }
@@ -718,6 +725,7 @@ color:rgb(0, 234, 255)
     /* border-radius:  0px 0px 20px 20px; */
     color: white;
     padding: 15px;
+
 }
 
 
@@ -744,6 +752,7 @@ color:rgb(0, 234, 255)
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    
     
 
     
@@ -976,6 +985,14 @@ footer{
         
     }
 
+    #a-cv-font{
+        font-size: 10px;
+      
+    }
+
+
+    
+
 
     
     
@@ -1006,11 +1023,20 @@ footer{
         gap: 30px;
         justify-content: center;
         background-color: rgb(44, 18, 75);
-       
 
-        
-        
 
+    }
+
+    #a-cv-font{
+        font-size: 10px;
+        width: 15%;
+      
+    }
+
+
+
+    .card-desc a{
+        top: 10px;
     }
 
     .top-wrapper{
@@ -1214,6 +1240,13 @@ footer{
     
     }
 
+    #a-cv-font{
+        font-size: 10px;
+        width: 25%;
+      
+    }
+
+
     
 
 
@@ -1266,6 +1299,14 @@ footer{
     
     
     }
+
+    
+    #a-cv-font{
+        font-size: 10px;
+        width: 35%;
+      
+    }
+
     
     .aboutMe h3{
     
@@ -1369,6 +1410,15 @@ footer{
     
     }
 
+    #a-cv-font{
+        font-size: 10px;
+        width: 45%;
+      
+    }
+
+    
+   
+
     .myImage{
 
         height:200px; /*395*/
@@ -1421,6 +1471,7 @@ footer{
 
 }
 
+
 @media screen and (max-width: 321px){
 
     
@@ -1431,7 +1482,7 @@ footer{
     }
 
     
-.check-out:hover{
+    .check-out:hover{
 
 
     transform: scale(0.5);
