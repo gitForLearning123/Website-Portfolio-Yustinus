@@ -97,6 +97,8 @@ font-family: "Source Code Pro", monospace;
 font-optical-sizing: auto;
 font-weight: 100;
 font-style: normal;
+justify-content: center;
+gap: 20px;
 
 }
 
@@ -114,7 +116,7 @@ align-items: center;
 
 position: relative;
 height: fit-content;
-width: 42%;
+width: 37%;
 scale: calc(1.4);
 left: 20px;
 bottom: 100px;
@@ -128,7 +130,7 @@ bottom: 100px;
 
 .myImage{
 
-    height: 895px; /*895*/
+    height: 918px; /*895*/
     width: 600px; /*600*/
     z-index: 1;
 
@@ -492,6 +494,7 @@ color:rgb(0, 234, 255)
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
+    height: 100%;
 
     
 }
@@ -675,7 +678,9 @@ color:rgb(0, 234, 255)
 #port-img{
     width: 100%;
     border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
 }
+
 
 .bot-div-wrapper2{
     display: flex;
@@ -683,6 +688,7 @@ color:rgb(0, 234, 255)
     flex-wrap: wrap;
     gap: 30px;
     width: 80%;
+    margin-bottom: 100px;
 }
 
 .card-portfolio{
@@ -697,7 +703,7 @@ color:rgb(0, 234, 255)
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    height: 50%;
+    height: fit-content;
     
     
 }
@@ -953,8 +959,8 @@ footer{
         align-items: center;
     }
 
-    .myIntro-name{
-        width: fit-content;
+    .myIntro{
+       width: 42%;
       
     }
 
@@ -968,8 +974,8 @@ footer{
 
     .myImage{
 
-        height: 595px; /*895*/
-        width: 400px; /*600*/
+        height: 895px; /*895*/
+        width: 550px; /*600*/
         z-index: 1;
 
         
@@ -979,7 +985,7 @@ footer{
 
         left: 100px;
         bottom: 20px;
-        width: 50%;
+        width: 42%;
         
         
         
@@ -997,6 +1003,36 @@ footer{
     
     
     
+}
+
+
+@media screen and (max-width: 1284px){
+
+
+  .myIntro-name{
+    font-size: 25px;
+  }
+
+  #wb-ho{
+
+    font-size: 23px;
+
+  }
+
+  .type-container h5{
+    font-size: 8px;
+  }
+
+  #mimpi{
+    font-size: 5px;
+  }
+
+  .myIntro{
+    width: 38%;
+ 
+  }
+
+
 }
 
 @media screen and (max-width: 1189px){
@@ -1063,7 +1099,7 @@ footer{
         justify-content: center;
         border-radius: 100%;
         align-items: center;
-        margin-top: 50px;;
+        margin-top: 150px;;
 
     }
 
@@ -1082,7 +1118,16 @@ footer{
     .myIntro{
 
         transform: scale(0.8);
+        margin-right: 50px;
 
+    }
+
+    .top-div{
+        height: 826px;
+    }
+
+    .top-wrapper{
+        transform: scale(0.9);
     }
 
     
@@ -1190,12 +1235,6 @@ footer{
 
     } */
 
-    .myIntro{
-        /* background-color: rgb(70, 48, 117); */
-        scale: calc(1.2);
-        left: 50px; 
-    }
-
 
 
 
@@ -1209,9 +1248,8 @@ footer{
 
     .myIntro{
         /* background-color: rgb(70, 48, 117); */
-        scale: calc(1.1);
-        left: 20px; 
-
+       width: 80%;
+       margin-right: 80px;
 
     }
 
@@ -1260,8 +1298,8 @@ footer{
     .myIntro{
         /* background-color: rgb(70, 48, 117); */
         transform: scale(0.7);
-        left: 10px; 
-        width: 100%;
+        left: 50px; 
+        width: 80%;
     }
 
     .card-skill{
@@ -1273,17 +1311,7 @@ footer{
 
 }
 
-@media screen and (max-width: 536px){
 
-    .myIntro{
-        /* background-color: rgb(70, 48, 117); */
-        transform: scale(0.8);
-        left: 10px; 
-        width: 80%;
-    }
-
-
-}
 
 @media screen and (max-width:464px){
 
