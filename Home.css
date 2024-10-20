@@ -1080,8 +1080,8 @@ footer{
         align-items: center;
         justify-content: center;
         gap: 200px;
-        padding-top: 150px;
-        padding-bottom: 150px;
+        margin-top: 150px;
+        margin-bottom: 150px;
 
         
     
