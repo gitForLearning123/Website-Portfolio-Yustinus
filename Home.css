@@ -76,28 +76,6 @@ li:hover a::after {
     width: 100%;
 } 
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
-
-
 
 
 .nav-right{
@@ -122,6 +100,27 @@ font-style: normal;
 justify-content: center;
 gap: 20px;
 
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 
 main{
@@ -155,6 +154,7 @@ bottom: 100px;
     height: 918px; /*895*/
     width: 600px; /*600*/
     z-index: 1;
+    display: flex;
 
    
    
@@ -331,7 +331,7 @@ color:rgb(0, 234, 255)
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    width: 100%;
     /* border-top: 1px solid white; */
 
 
@@ -345,11 +345,28 @@ color:rgb(0, 234, 255)
 }
 
 .aboutMe{
-    text-align: justify;
-    color: white;
-    position: relative;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+    
   
+
+    
+
+}
+
+
+.aboutMe-div-title{
+
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
 
     
 
@@ -374,10 +391,11 @@ color:rgb(0, 234, 255)
     font-weight: 700;
     font-style: normal;
     font-size: 40px;
-    position: relative;
-    text-align: center;
-    padding: 20px
-   
+    color: rgb(0, 234, 255);
+    margin-left: 20px;
+    
+
+ 
 
 
 
@@ -471,6 +489,42 @@ color:rgb(0, 234, 255)
 
 }
 
+.bot-div{
+    height: min-content;
+    background-color: rgb(106, 68, 121, 0.5);
+    padding-bottom: 100px;
+ 
+}
+
+
+
+.skillTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.skill-div-title{
+
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+
+    
+
+
+}
+  
+
+    
+
+
 .skill-div{
 
    height: min-content;
@@ -487,6 +541,8 @@ color:rgb(0, 234, 255)
     font-style: normal;
     font-size: 40px;
     color: rgb(0, 234, 255);
+    margin-left: 20px;
+    
 
  
     
@@ -494,11 +550,7 @@ color:rgb(0, 234, 255)
 
 
 
-.skill-div #skill_title{
 
-    text-align: center;
-    padding: 50px;
-} 
 
 .card-skill-wrapper1{
     /* background-color: chocolate; */
@@ -657,6 +709,8 @@ color:rgb(0, 234, 255)
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    gap: 20px;
+
 }
 
 
@@ -680,8 +734,7 @@ color:rgb(0, 234, 255)
     font-style: normal;
     font-size: 40px;
     color: white;
-    margin-top: 10px;
-    margin-right: 50px;
+    margin-right: 20px;
 
 
 }
@@ -1602,6 +1655,7 @@ footer{
         font-size: 20px;
     }
 
+
   
 
 
@@ -1616,5 +1670,4 @@ footer{
 
 
    
-
 
