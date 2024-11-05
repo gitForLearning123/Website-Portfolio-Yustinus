@@ -26,6 +26,29 @@ body{
 
 }
 
+.blur{
+
+filter: blur(8px);
+transition-property: filter;
+transition-duration: 0.3s;
+transition-timing-function: ease;
+
+}
+
+
+
+
+
+.popup-off{
+
+width: 300px;
+height: 300px;
+background-color: white;
+position: fixed;
+z-index: 1;
+
+}
+
 header{
 
 padding: 20px;
@@ -49,7 +72,7 @@ gap: 50px;
 
 }
 
- li a {
+ .liheader a{
     position: relative;
     text-decoration: none;
     font-size: 15px;
@@ -61,7 +84,7 @@ gap: 50px;
     transition: all 0.3s ease;
 }
 
-li a::after {
+.liheader a::after {
     content: '';
     position: absolute;
     width: 0%;
@@ -72,7 +95,7 @@ li a::after {
     transition: width 0.3s ease;
 }
 
-li:hover a::after {
+.liheader:hover a::after {
     width: 100%;
 } 
 
@@ -111,7 +134,7 @@ gap: 20px;
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: rgb(255, 136, 0);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -145,7 +168,9 @@ bottom: 100px;
 
 
 
+
 }
+
 
 
 
@@ -155,6 +180,8 @@ bottom: 100px;
     width: 600px; /*600*/
     z-index: 1;
     display: flex;
+    position: relative;
+    right: 1000px;
 
    
    
@@ -193,6 +220,7 @@ width: 100%;
 display: flex;
 align-items: center;
 background-color: rgb(6, 14, 52);
+
 
 }
 
@@ -756,6 +784,14 @@ color:rgb(0, 234, 255)
     object-fit: cover;
 }
 
+.img1{
+
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+
+}
+
 
 .bot-div-wrapper2{
     display: flex;
@@ -955,6 +991,179 @@ footer{
 
 }
 
+
+
+.popup{
+
+
+    background-color: white;
+    position: fixed;
+    width: 40%;
+    border-radius: 20px;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+}
+
+.popUp{
+
+    justify-content: flex-start;
+    margin: 20px;
+    gap: 10px;
+    
+
+
+}
+
+
+.popup h1{
+
+    
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+
+
+}
+
+.a-container {
+    background-color: aqua;
+    display: flex;
+    gap: 20px;
+
+}
+
+.liATS{
+
+    width: 20%;
+
+
+}
+
+.linon-formal{
+    width: 20%;
+}
+
+
+
+
+.lipopup1{
+    
+
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    width: 20%;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+
+
+}
+
+.non-formal{
+    background-color: rgb(56, 42, 165);
+    color: white;
+}
+
+
+
+.ATS{
+
+    border: 1px solid rgb(56, 42, 165);
+    background-color: white;
+    color: rgb(56, 42, 165);
+
+}
+
+
+
+
+.lipopup1:hover{
+
+    cursor: pointer;
+
+}
+
+
+.container-popup{
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    background-color: rgb(0, 0, 0, 0.5);
+
+
+}
+
+.hori{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+
+
+
+
+}
+
+.hori h1{
+    margin: 20px 20px;
+}
+
+.close-icon1{
+
+    background-color: rgb(255, 255, 255);
+    transform: scale(2);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 100%;
+    width: 20px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    display: flex;
+    color: red;
+    margin: 20px 20px;
+
+}
+
+.close-icon1:hover {
+
+    cursor: pointer;
+    background-color: red;
+    color: white;
+
+
+}
+
+.openPopUp{
+
+    visibility: visible;
+
+
+}
+
+.closeButton{
+    visibility: hidden;
+
+}
+
 @media screen and (max-width: 1659px){
     .myIntro{
         scale: calc(1.2);
@@ -1015,10 +1224,6 @@ footer{
         height: 896px; /*895*/
         width: 600px; /*600*/
    
-
-
-
-       
     }
 
     .myIntro{
@@ -1039,6 +1244,11 @@ footer{
       
     }
 
+    .cv{
+        width: 40%;
+    }
+
+ 
 
 
 
@@ -1259,6 +1469,18 @@ footer{
     }
 }
 
+@media screen and (max-width: 1175px) {
+
+    .lipopup1{
+        width: 30%;
+    }
+
+    .popUp{
+        width: 100%;
+    }
+    
+}
+
 @media screen and (max-width: 1087px){
 
 
@@ -1266,6 +1488,13 @@ footer{
      width: 60%;    
 
 }
+
+.popup{
+
+    width: 60%;
+
+
+  }
 
 }
 
@@ -1276,7 +1505,13 @@ footer{
       .card-portfolio{
         width: 70%;    
    
-   }
+    }
+
+
+     
+
+
+
     
 
 
@@ -1315,6 +1550,17 @@ footer{
 
 
 
+    
+}
+
+@media screen and (max-width: 808px) {
+
+    .popup{
+
+        width: 70%;
+    
+      }
+    
     
 }
 
@@ -1385,6 +1631,39 @@ footer{
     
 
 }
+
+
+@media screen and (max-width: 553px) {
+
+    .popup{
+
+        width: 80%;
+    
+      }
+    
+    
+}
+
+@media screen and (max-width: 490px) {
+
+    .hori h1{
+        font-size: 18px;
+    }
+
+    .lipopup1{
+        padding: 10px;
+    }
+
+    .cv{
+        width: 50%;
+    }
+
+
+
+
+}
+
+
 
 
 
@@ -1476,7 +1755,6 @@ footer{
     
     }
 
-    
     .aboutMe-div-title{
 
         font-size: 25px;
@@ -1488,7 +1766,6 @@ footer{
 
     }
 
-
         
     .footer-desc h1{
         font-size: 25px;
@@ -1496,7 +1773,7 @@ footer{
 
     }
 
-
+  
     
 
 
@@ -1505,7 +1782,24 @@ footer{
 }
 
 
+@media screen and (max-width: 423px){
+
+    .cv{
+        width: 70%;
+    }
+
+
+
+
+
+}
+
+
+
+
 @media screen and (max-width: 389px){
+
+ 
 
     .check-out{
 
@@ -1519,11 +1813,17 @@ footer{
         color: rgb(255, 255, 255);
         text-decoration: none;
         
+        
     
         
         
     
     }
+
+    .cv{
+        width: 70%;
+    }
+
 
     #a-cv-font{
         font-size: 10px;
@@ -1583,6 +1883,29 @@ footer{
     
     }
     
+
+}
+
+
+@media screen and (max-width: 353px){
+
+  .lipopup1{
+    width: 40%;
+    
+  }
+
+  .popUp{
+    transform: scale(0.8);
+    justify-content: center;
+    position: relative;
+    right:20px;
+  }
+
+
+
+
+
+
 
 }
 
