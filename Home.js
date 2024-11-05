@@ -17,4 +17,52 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+// $(".check-out").on("click", () => {
+
+//   $("body").addClass("blur")
+
+
+// })
+
+
+
+$(document).ready( () => {
+
+
+  $(".myImage").animate({right: 0}, 
+    {duration: 1000}
+  )
+
+
+}
+
+
+)
+
+
+function closePopUp(){
+
+    let closeIcon1 = document.getElementById("container-popup")
+
+    closeIcon1.classList.remove("openPopUp")
+
+    mybutton.classList.remove("closeButton")
+
+
+
+
+}
+
+function openPopUp(){
+
+  let closeIcon1 = document.getElementById("container-popup")
+
+  closeIcon1.classList.add("openPopUp")
+
+  mybutton.classList.add("closeButton")
+
+
+}
+  
+
 
