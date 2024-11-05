@@ -11,15 +11,15 @@
 <body>
    <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-danger"><i class="bi bi-arrow-up"></i></button>
      <header>
-        <nav class="nav-left"  >
+        <nav class="nav-left">
            <h1>Yustinus <span>Emmanuel.</span></h1>
         </nav>
         <nav class="nav-right">
             <ul>
-                <li><a href="#aboutme"><span>01.</span> About Me</a></li>
-                <li><a href="#skill"><span>02.</span> Skill</a></li>
-                <li><a href="#portfolio"><span>03.</span> Project</a></li>
-                <li><a href="#certificate"><span>04.</span> Certificate</a></li>
+                <li class="liheader aboutme"><a href="#aboutme"><span>01.</span> About Me</a></li>
+                <li class="liheader skill"><a href="#skill"><span>02.</span> Skill</a></li>
+                <li class="liheader project"><a href="#portfolio"><span>03.</span> Project</a></li>
+                <li class="liheader portfolio"><a href="#certificate"><span>04.</span> Certificate</a></li>
             </ul>
         </nav>
      </header>
@@ -31,7 +31,6 @@
                <div class="bg-myImage"></div>
                <img src="Foto_Nuel__Semester_1_-removebg-preview.png" alt=""> 
               </div>
-
             <div class="myIntro">
                <div class="type-container">
                   <h5>Hi👋, my name is</h5>
@@ -40,11 +39,8 @@
                  <h1 id="wb-ho">I LIKE <span>DESIGNING </span> AND <span>DEVELOPING</span> A WEBSITE</h1>
                  <p class="mimpi" id="mimpi">Web Designer | Ui/Ux Designer | Front-end Developer</p>
               </div>
-             
-
-         </div>
-          
-        </div>
+         </div>    
+      </div>
       <div class="mid-div" id="aboutMe">
          <div class="aboutMe">
             <h3 id="aboutme">ABOUT ME 🙋</h3>
@@ -60,7 +56,7 @@
                <h1>Organization Exprience</h1>
                <p>I joined two UKM (Student Work Units) at BINUS, namely HIMSISFO (Information Systems Student Association) as a member and BNCC (Binusian Computer Club) as a member. I am currently joined the Lnt Back-end developers course in BNCC.</p>
                <div class="button-cv">
-                  <a href="CV - Yustinus Emmanuel Adi Marpaung.pdf" download class="check-out" id="a-cv-font">Download CV</a>
+                  <button class="check-out cv" onclick="openPopUp()">Download CV</button>
                </div>
                
               </div>
@@ -155,7 +151,7 @@
                <div class="bot-div-wrapper2">
 
                   <div class="card-portfolio">
-                      <a><img src="Gambar_Portfolio Yustinus.png" alt="" id="port-img"></a>
+                      <a><img src="Gambar_Portfolio Yustinus.png" alt="" class="port img1"></a>
                      <div class="h1-port">
                         <h1>Yustinus's Portfolio Website</h1>
                      </div>                 
@@ -171,7 +167,7 @@
                   </div>
 
                   <div class="card-portfolio">
-                     <a><img  src="Foto Project Wheelhub.png" alt="" id="port-img"></a>
+                     <a><img  src="Foto Project Wheelhub.png" alt="" class="wheelhub img1"></a>
                      <div class="h1-port">
                         <h1>WheelHub Website</h1>
                      </div>                 
@@ -188,7 +184,7 @@
 
                   
                   <div class="card-portfolio">
-                     <a><img  src="Foto Figma Aplikasi Tiket Pesawat.png" alt="" id="port-img"></a>
+                     <a><img  src="Foto Figma Aplikasi Tiket Pesawat.png" alt="" class="figma img1"></a>
                      <div class="h1-port">
                         <h1>Zi-Travel Mobile Application</h1>
                      </div>                 
@@ -283,6 +279,26 @@
         
 
    </div>
+
+
+ <div class="container-popup" id="container-popup">
+         <div class="popup" id="popup">
+            <div class="hori">
+               <h1>Choose CV format:</h1>
+               <button class="close-icon1" onclick="closePopUp()" id="close-icon1">
+                  <i class="bi bi-x"></i>
+               </button>
+            </div>
+            <ul class="ul popUp">
+              <a href="CV (ATS)_Yustinus Emmanuel Adi Marpaung.pdf" class="lipopup1 ATS" download>ATS</a>
+              <a href="CV - Yustinus Emmanuel Adi Marpaung.pdf" class="lipopup1 non-formal" download>Non-formal</a>
+            </ul>
+              
+         </div>
+   </div>
+       
+
+
      </main>
      <footer>
           <div class="footer-desc">
@@ -305,7 +321,7 @@
              <p>&copy; Yustinus Emmanuel | All Rights Reserved</p>
           </div>
      </footer>
-   <script src="jquery-3.7.1.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    <script src="Home.js">
        
    </script>
